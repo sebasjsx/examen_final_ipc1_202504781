@@ -1,0 +1,21 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+package ipc1.prototiporeproductor;
+
+/**
+ *
+ * @author abads
+ */
+public class PrototipoReproductor {
+
+    public static void main(String[] args) {
+        Cancion c1 = new Cancion("FEAR", "Kendrick Lamar", 200);
+        Cancion c2 = new Cancion("PRIDE", "Kendrick Lamar", 200);
+        Cancion c3 = new Cancion("Swimming Pool", "Kendrick Lamar", 200);
+
+        c1.reproducir();
+        c2.reproducir();
+        c3.reproducir();
+    }
+}

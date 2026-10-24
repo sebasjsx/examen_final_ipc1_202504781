@@ -1,0 +1,44 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package ipc1.prototiporeproductor;
+
+/**
+ *
+ * @author abads
+ */
+public class NodoDoble {
+
+    private Cancion cancion;
+    private NodoDoble anterior;
+    private NodoDoble siguiente;
+
+    public NodoDoble(Cancion cancion) {
+        this.cancion = cancion;
+    }
+
+    public Cancion getCancion() {
+        return cancion;
+    }
+
+    public void setCancion(Cancion cancion) {
+        this.cancion = cancion;
+    }
+
+    public NodoDoble getAnterior() {
+        return anterior;
+    }
+
+    public void setAnterior(NodoDoble anterior) {
+        this.anterior = anterior;
+    }
+
+    public NodoDoble getSiguiente() {
+        return siguiente;
+    }
+
+    public void setSiguiente(NodoDoble siguiente) {
+        this.siguiente = siguiente;
+    }
+}

@@ -14,8 +14,13 @@ public class PrototipoReproductor {
         Cancion c2 = new Cancion("PRIDE", "Kendrick Lamar", 200);
         Cancion c3 = new Cancion("Swimming Pool", "Kendrick Lamar", 200);
 
-        c1.reproducir();
-        c2.reproducir();
-        c3.reproducir();
+        Playlist listaPlayList = new Playlist();
+        listaPlayList.agregarCancion(c1);
+        listaPlayList.agregarCancion(c2);
+        listaPlayList.agregarCancion(c3);
+        System.out.println("Lista de canciones: ");
+        listaPlayList.mostrarPlaylist();
+        
+        
     }
 }

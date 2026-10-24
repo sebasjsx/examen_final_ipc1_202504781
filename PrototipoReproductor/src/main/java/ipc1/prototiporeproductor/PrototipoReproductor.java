@@ -20,7 +20,14 @@ public class PrototipoReproductor {
         listaPlayList.agregarCancion(c3);
         System.out.println("Lista de canciones: ");
         listaPlayList.mostrarPlaylist();
-        
-        
+
+        System.out.println("---------------------------------------------------");
+        System.out.println("NAVEGACION:");
+        listaPlayList.siguiente();
+        listaPlayList.siguiente();
+        listaPlayList.anterior();
+        listaPlayList.eliminarActual();
+        System.out.println("Lista dspues de eliminar la segunda:");
+        listaPlayList.mostrarPlaylist();
     }
 }

@@ -42,4 +42,53 @@ public class Playlist {
         }
     }
 
+    public Cancion siguiente() {
+        if (actual == null || actual.getSiguiente() == null) {
+            return null;
+        }
+        actual = actual.getSiguiente();
+        actual.getCancion().reproducir();
+        return actual.getCancion();
+    }
+
+    public Cancion anterior() {
+        if (actual == null || actual.getAnterior() == null) {
+            return null;
+        }
+        actual = actual.getAnterior();
+        actual.getCancion().reproducir();
+        return actual.getCancion();
+    }
+
+    public void eliminarActual() {
+        if (actual == null) {
+            return;
+        }
+
+        NodoDoble eliminado = actual;
+        NodoDoble anterior = eliminado.getAnterior();
+        NodoDoble siguiente = eliminado.getSiguiente();
+
+        if (anterior == null && siguiente == null) {
+            cabeza = null;
+            cola = null;
+            actual = null;
+        } else if (anterior == null) {
+            cabeza = siguiente;
+            cabeza.setAnterior(null);
+            actual = cabeza;
+        } else if (siguiente == null) {
+            cola = anterior;
+            cola.setSiguiente(null);
+            actual = cola;
+        } else {
+            anterior.setSiguiente(siguiente);
+            siguiente.setAnterior(anterior);
+            actual = siguiente;
+        }
+
+        eliminado.setAnterior(null);
+        eliminado.setSiguiente(null);
+        tamanio--;
+    }
 }
